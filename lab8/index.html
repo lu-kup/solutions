@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Trivia!</title>
+
+        <script>
+
+            // TODO: Add code to check answers to questions
+            document.addEventListener('DOMContentLoaded', function() {
+
+                let m = document.querySelector('#m');
+                m.addEventListener('click', function() {
+                    m.style.backgroundColor = 'red';
+                    document.querySelector('#response1').innerHTML = 'Incorrect';
+                });
+
+                let l = document.querySelector('#l');
+                l.addEventListener('click', function() {
+                    l.style.backgroundColor = 'red';
+                    document.querySelector('#response1').innerHTML = 'Incorrect';
+                });
+
+                let p = document.querySelector('#p');
+                p.addEventListener('click', function() {
+                    p.style.backgroundColor = 'green';
+                    document.querySelector('#response1').innerHTML = 'Correct';
+                });
+
+                document.querySelector('#check').addEventListener('click', function() {
+                    let answer = document.querySelector('#answer');
+                    //let field = document.querySelector('input');
+                    if (answer.value == 'Rome') {
+                        answer.style.backgroundColor = 'green';
+                        document.querySelector('#response2').innerHTML = 'Correct';
+                    } else {
+                        answer.style.backgroundColor = 'red';
+                        document.querySelector('#response2').innerHTML = 'Incorrect';
+                    }
+                });
+
+            });
+
+        </script>
+
+    </head>
+    <body>
+
+        <div class="jumbotron">
+            <h1>Trivia!</h1>
+        </div>
+
+        <div class="container">
+
+            <div class="section">
+                <h2>Part 1: Multiple Choice </h2>
+                <hr>
+
+                <!-- TODO: Add multiple choice question here -->
+                <h3>
+                    What is the capital of France?
+                </h3>
+
+                <button id = "m">
+                    Moscow
+                </button>
+
+                <button id = "l">
+                    Lyon
+                </button>
+
+                <button id = "p">
+                    Paris
+                </button>
+
+                <p id = "response1">
+                </p>
+
+            </div>
+
+            <div class="section">
+                <h2>Part 2: Free Response</h2>
+                <hr>
+
+                <!-- TODO: Add free response question here -->
+                <h3>
+                    What is the capital of Italy?
+                </h3>
+
+                <input id="answer" type="text">
+                </input>
+
+                <button id = "check"> Submit answer </button>
+
+                <p id = "response2">
+                </p>
+
+            </div>
+
+        </div>
+    </body>
+</html>

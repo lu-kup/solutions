@@ -1,0 +1,11 @@
+sort1 uses: Bubble sort
+
+How do you know?: When sorting the largest dataset that is in already sorted order, this algorithm performs better than algorithm 3. That is because bubble sort simply goes through each pair and finds that they are already sorted.
+
+sort2 uses: Merge sort
+
+How do you know?: When sorting the largest dataset that is in random order, this algorithm performs the best. Merge sort is a recursive algorithm that performs better with larger datasets than the other two.
+
+sort3 uses: Selection sort
+
+How do you know?: When sorting the largest dataset that is in already sorted order, this algorithm performs worse than algorithm 1. That is because, even if the list is already sorted, the algorithms goes through the dataset to detect the smallest value and repeats this process for each value.

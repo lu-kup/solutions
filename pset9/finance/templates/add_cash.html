@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Add cash
+{% endblock %}
+
+{% block main %}
+    <p> Enter the amount of cash you want to add:</p>
+    <form action="/add_cash" method="post">
+        <div class="form-group">
+            <input class="form-control" name="amount" placeholder="Amount" type="text">
+        </div>
+        <button class="btn btn-primary" type="submit">Add cash</button>
+    </form>
+{% endblock %}

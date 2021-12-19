@@ -1,0 +1,11 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Q
+{% endblock %}
+
+{% block main %}
+
+    <p>This stock is for company {{ info.name }}, its ticker is {{ info.symbol }}. Current share price is {{ info.price | usd }}.</p>
+
+{% endblock %}
